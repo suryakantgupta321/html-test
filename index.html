@@ -22,6 +22,14 @@
       });
 
       api.executeCommand('toggleCamera');
+
+      api?.addEventListener(
+        "videoConferenceJoined",
+        function (event) {
+          console.log("videoConferenceJoined")
+          api.executeCommand('toggleCamera');
+        }
+      )
       // api.executeCommand('toggleCamera', 'facingMode');
       // api.executeCommand('toggleCamera', 'environment');
     }
