@@ -27,7 +27,8 @@
         "videoConferenceJoined",
         function (event) {
           console.log("videoConferenceJoined")
-          api.executeCommand('toggleCamera');
+          api.executeCommand('toggleCamera', 'facingMode');
+          // api.executeCommand('toggleCamera');
         }
       )
       // api.executeCommand('toggleCamera', 'facingMode');
