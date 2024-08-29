@@ -31,6 +31,12 @@
           // api.executeCommand('toggleCamera');
         }
       )
+
+      const btn = document.getElementById('switchcamerabtn')
+      btn?.addEventListener('click', () => {
+        console.log("Switched")
+        api.executeCommand('toggleCamera', 'facingMode');
+      })
       // api.executeCommand('toggleCamera', 'facingMode');
       // api.executeCommand('toggleCamera', 'environment');
     }
@@ -39,6 +45,10 @@
 
 <body>
   <div id="jaas-container" />
+
+  <button style="display: none;" id="switchcamerabtn">
+    Swicth Camera
+  </button>
 </body>
 
 </html>
